@@ -1,6 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700&display=swap");
+
+body {
+  font-family: "Lora", serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: center;
+}
+
 .topbar {
-  background-color: #333;
+  background-color: #00a3ff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Lora", serif;
 }
 
 .topbar ul {

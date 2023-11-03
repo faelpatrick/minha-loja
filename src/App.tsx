@@ -7,7 +7,6 @@ import Products from "./views/Products/Products";
 import "./App.css";
 
 // src/firebase-config.js
-
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
