@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import TopMenu from './views/Topmenu/Topmenu';
+import TopMenu from "./views/Topmenu/Topmenu";
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
@@ -22,12 +22,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
-const App: React.FC = () => {
+const App = () => {
   return (
     <Router>
       <div className="App">
-      <TopMenu />
+        <TopMenu />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
