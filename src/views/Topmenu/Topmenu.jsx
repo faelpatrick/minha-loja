@@ -45,13 +45,13 @@ class TopMenu extends React.Component {
               <Link to="/">Home</Link>
             </li>
             <li onClick={this.closeMenu}>
-              <Link to="/products">Products</Link>
+              <Link to="/products">Produtos</Link>
             </li>
             <li onClick={this.closeMenu}>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact">Contacto</Link>
             </li>
             <li onClick={this.closeMenu}>
-              <Link to="/about">About</Link>
+              <Link to="/about">Sobre</Link>
             </li>
           </ul>
         </div>

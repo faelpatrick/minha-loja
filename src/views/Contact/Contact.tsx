@@ -1,12 +1,13 @@
 import React from 'react';
-import './Contact.css';
+import ContactForm from '../../components/contactformdefault/ContactFormDefault'; 
 
-const Contact: React.FC = () => {
-    return (
-        <div className='Contact'>
-            <h1>Contact Page</h1>
-        </div>
-    );
+const ContactPage = () => {
+  return (
+    <div>
+      <h1>Contato</h1>
+      <ContactForm />
+    </div>
+  );
 };
 
-export default Contact;
+export default ContactPage;

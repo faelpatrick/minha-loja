@@ -1,2 +1,75 @@
-.products {
+.container-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  margin: auto;
+}
+
+.products-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #ededed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.products-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+}
+
+.products-info,
+.description {
+  padding: 1rem;
+}
+
+.description {
+  text-align: justify;
+  font-size: 0.9rem; /* Aumentar um pouco para melhor legibilidade */
+  color: #333; /* Cor mais escura para melhor contraste */
+}
+
+.product-name {
+  margin: 0.5rem 0; /* Adicionar espaço em torno do nome */
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem; /* Tamanho padronizado para o nome */
+  font-weight: bold; /* Destacar o nome */
+}
+
+.product-brand {
+  margin: 0;
+  text-align: center; /* Alinhar ao centro para consistência */
+  font-size: 0.85rem;
+  color: #777; /* Cor suave */
+}
+
+.product-price {
+  font-size: 1.5rem; /* Tamanho maior e padronizado */
+  font-weight: 700;
+  text-align: center; /* Alinhar ao centro para consistência */
+  margin-top: auto; /* Empurrar para o fundo */
+  color: #333; /* Cor escura para destaque */
+}
+
+@media screen and (min-width: 768px) {
+  /* Ponto de quebra para tablets */
+  .container-products {
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* Ponto de quebra para desktops */
+  .container-products {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas se ajustam ao tamanho da janela */
+    gap: 2rem;
+  }
 }
