@@ -5,6 +5,7 @@ import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
 import Products from "./views/Products/Products";
+import Messages from "./views/Messages/MessagesPage";
 import NotFoundPage from "./views/Notfound/404";
 import "./App.css";
 
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/messages" element={<Messages />} />
           <Route path="/*" element={<NotFoundPage />} />
 
         </Routes>
