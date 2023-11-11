@@ -1,12 +1,15 @@
+
 ul.container-msg {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    align-items: center;
-
+    gap: 0.2rem;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: space-evenly;
 }
 
 ul.container-msg li {
@@ -18,3 +21,4 @@ ul.container-msg li {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
+

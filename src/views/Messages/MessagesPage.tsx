@@ -39,7 +39,7 @@ const Messages = () => {
               <strong>Email:</strong> {message.email}
             </p>
             <p>
-              <strong>Mensagem:</strong> {message.content}
+              <strong>Mensagem:</strong> {message.message}
             </p>
           </li>
         ))}

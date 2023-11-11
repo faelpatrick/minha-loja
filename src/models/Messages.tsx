@@ -2,6 +2,6 @@ export interface Message {
   id: string; 
   name: string; 
   email: string; 
-  content: string; 
+  message: string; 
   
 }
