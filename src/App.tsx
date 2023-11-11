@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import TopMenu from "./views/Topmenu/Topmenu";
+import Header from "./views/Header/Header";
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Contact from "./views/Contact/Contact";
@@ -30,16 +30,18 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <TopMenu />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/messages" element={<Messages />} />
-          <Route path="/*" element={<NotFoundPage />} />
-
-        </Routes>
+        <Header />
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/*" element={<NotFoundPage />} />
+          </Routes>
+        </div>
+        <footer>Desenvolvido por <a href="https://linktr.ee/faelpatrick" target="_blank" >@faelpatrick</a></footer>
       </div>
     </Router>
   );

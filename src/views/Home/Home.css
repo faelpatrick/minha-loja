@@ -1,2 +1,61 @@
-.Home {
+header .topbar-container {
+  width: 100vw;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header-info {
+  height: calc(100vh - 100px);
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 100px;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  background-image: url("../../assets/img/header-bg-desktop.jpg");
+  background-repeat: no-repeat;
+}
+.site-title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+  padding: 0;
+}
+
+.site-description {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .site-header-info {
+    font-family: "New Spirit", "Lora", serif;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0px;
+    letter-spacing: 1px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+
+  }
+  .site-title {
+    font-size: 3rem;
+  }
 }
