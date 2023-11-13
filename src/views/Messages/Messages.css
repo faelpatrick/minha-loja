@@ -35,9 +35,14 @@ ul.container-msg li:hover {
 }
 
 .gridLeft {
-  grid-area: Left;
+   grid-area: Left;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow: scroll;
+  align-content: flex-start;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 .container-msg {
   display: flex;
