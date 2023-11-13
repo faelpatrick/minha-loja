@@ -1,14 +1,15 @@
 ul.container-msg {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 0.2rem;
-  flex-direction: row;
-  align-items: stretch;
-  flex-wrap: wrap;
-  align-content: stretch;
-  justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    overflow: hidden;
 }
 
 ul.container-msg li {
@@ -35,15 +36,15 @@ ul.container-msg li:hover {
 }
 
 .gridLeft {
-   grid-area: Left;
+  grid-area: Left;
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow: scroll;
   align-content: flex-start;
   justify-content: space-evenly;
   align-items: flex-start;
 }
+
 .container-msg {
   display: flex;
   flex-direction: column;
@@ -58,14 +59,27 @@ ul.container-msg li:hover {
 }
 
 @media screen and (min-width: 1024px) {
-  /* Ponto de quebra para tablets */
   .gridMsgList {
     grid-template-columns: 1fr 4fr;
     grid-template-areas: "Left Right";
+    gap: 0.2rem;
   }
 
+  ul.container-msg {
+    gap: 0.2rem;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-evenly;
+    overflow-y: scroll ;
+    overflow-x: hidden;
+    width: 300px;
+
+}
+
   ul.container-msg li {
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     padding: 0 0.5rem;
     background-color: #ededed;
