@@ -1,20 +1,35 @@
+.contact-page {
+  width: fit-content;
+  background-color: #ededed;
+  border-radius: 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
 form {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
   flex-direction: column;
   align-items: center;
 }
 
-input, textarea, button {
-  min-width: 300px;
+input,
+textarea,
+button {
+  min-width: 400px;
+  height: 50px;
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 0.25rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-
+}
+textarea {
+  min-height: 150px;
 }
 
 button {
@@ -22,18 +37,20 @@ button {
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   transition: background-color 0.3s ease;
-  
+  height: 60px;
 }
 
 h1 {
-  text-align: center;
+  display: flex;
   font-size: 1.8rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   font-weight: 900;
+  justify-content: space-evenly;
+  margin: 0;
 }
 
 p {
@@ -43,6 +60,8 @@ p {
 section {
   padding: 1rem 1rem 6rem 1rem;
 }
+
+
 
 @media screen and (min-width: 1000px) {
   section {

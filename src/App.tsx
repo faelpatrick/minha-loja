@@ -41,7 +41,12 @@ const App = () => {
             <Route path="/*" element={<NotFoundPage />} />
           </Routes>
         </div>
-        <footer>Desenvolvido por <a href="https://linktr.ee/faelpatrick" target="_blank" >@faelpatrick</a></footer>
+        <footer>
+          Desenvolvido por{" "}
+          <a href="https://linktr.ee/faelpatrick" target="_blank">
+            @faelpatrick
+          </a>
+        </footer>
       </div>
     </Router>
   );
