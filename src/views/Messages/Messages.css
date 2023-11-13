@@ -1,24 +1,79 @@
-
 ul.container-msg {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 0.2rem;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: wrap;
-    align-content: stretch;
-    justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
 }
 
 ul.container-msg li {
+  width: 100%;
+  max-width: 250px;
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 1rem;
+}
+ul.container-msg li:hover {
+  transform: scale(1.01);
+}
+
+.gridMsgList {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "Left Left"
+    "Right Right";
+  gap: 2rem;
+}
+
+.gridLeft {
+  grid-area: Left;
+  display: flex;
+  flex-direction: column;
+}
+.container-msg {
+  display: flex;
+  flex-direction: column;
+}
+
+.gridRight {
+  grid-area: Right;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  background-color: #ededed;
+}
+
+@media screen and (min-width: 1024px) {
+  /* Ponto de quebra para tablets */
+  .gridMsgList {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: "Left Right";
+  }
+
+  ul.container-msg li {
     width: 100%;
     max-width: 600px;
-    padding: 1rem;
-    background-color: #f5f5f5;
+    padding: 0 0.5rem;
+    background-color: #ededed;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-}
+    margin: 0.1rem;
+  }
 
+  .gridLeft p {
+    font-size: 0.9rem;
+  }
+
+  .gridRight {
+  }
+}

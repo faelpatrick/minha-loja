@@ -5,6 +5,7 @@ import "./Messages.css";
 
 const Messages = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [mainMsg, setMainMsg] = useState<Message>({} as Message);
 
   useEffect(() => {
     const fetchMessages = async () => {
@@ -19,31 +20,45 @@ const Messages = () => {
         };
       });
       setMessages(messagesList);
+      setMainMsg(messagesList[0]);
     };
 
     fetchMessages();
   }, []);
 
   return (
-    <div >
+    <div>
       <h1>Mensagens Recebidas</h1>
-      <ul className="container-msg">
-        {messages.map((message) => (
-          <li key={message.id}>
-            {" "}
-            {/* Atualizado para usar 'docId' */}
-            <p>
-              <strong>Nome:</strong> {message.name}
-            </p>
-            <p>
-              <strong>Email:</strong> {message.email}
-            </p>
-            <p>
-              <strong>Mensagem:</strong> {message.message}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="gridMsgList">
+        
+        <div className="gridLeft">
+          <ul className="container-msg">
+            {messages.map((message) => (
+              <li key={message.id} onClick={() => setMainMsg(message)}>
+                {" "}
+                <p>
+                  <strong>Nome:</strong> {message.name}
+                </p>
+                <p>
+                  <strong>Email:</strong> {message.email}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="gridRight mainMsg">
+          <p>
+            <strong>Nome:</strong> {mainMsg.name}
+          </p>
+          <p>
+            <strong>Email:</strong> {mainMsg.email}
+          </p>
+          <p>
+            <strong>Mensagem:</strong> {mainMsg.message}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
