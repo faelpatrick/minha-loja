@@ -44,10 +44,10 @@ const Messages = () => {
             {(filteredMessages.length > 0 ? filteredMessages : messages).map((message) => (
               <li key={message.id} onClick={() => setMainMsg(message)}>
                 <p>
-                  <strong>Nome:</strong> {message.name}
+                  <strong>Nome: </strong> {message.name}
                 </p>
                 <p>
-                  <strong>Email:</strong> {message.email}
+                  <strong>Email: </strong> {message.email}
                 </p>
               </li>
             ))}
@@ -56,13 +56,13 @@ const Messages = () => {
 
         <div className="gridRight mainMsg">
           <p>
-            <strong>Nome:</strong> {mainMsg.name}
+            <strong>Nome: </strong> {mainMsg.name}
           </p>
           <p>
-            <strong>Email:</strong> {mainMsg.email}
+            <strong>Email: </strong> {mainMsg.email}
           </p>
           <p>
-            <strong>Mensagem:</strong> {mainMsg.message}
+            <strong>Mensagem: </strong> {mainMsg.message}
           </p>
         </div>
       </div>
