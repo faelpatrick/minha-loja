@@ -5,6 +5,7 @@ import "./Messages.css";
 
 const Messages = () => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [filteredMessages, setFilteredMessages] = useState<Message[]>([]);
   const [mainMsg, setMainMsg] = useState<Message>({} as Message);
 
   useEffect(() => {
@@ -26,16 +27,22 @@ const Messages = () => {
     fetchMessages();
   }, []);
 
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const searchTerm = event.target.value;
+    const lowercasedSearchTerm = searchTerm.toLowerCase();
+    const filtered = messages.filter((message) => message.name.toLowerCase().includes(lowercasedSearchTerm) || message.email.toLowerCase().includes(lowercasedSearchTerm));
+    setFilteredMessages(filtered);
+  };
+
   return (
     <div>
       <h1>Mensagens Recebidas</h1>
       <div className="gridMsgList">
-        
         <div className="gridLeft">
+          <input type="text" placeholder="Pesquisar &nbsp; &#128269;" id="inputSearch" onChange={handleSearch} />
           <ul className="container-msg">
-            {messages.map((message) => (
+            {(filteredMessages.length > 0 ? filteredMessages : messages).map((message) => (
               <li key={message.id} onClick={() => setMainMsg(message)}>
-                {" "}
                 <p>
                   <strong>Nome:</strong> {message.name}
                 </p>

@@ -1,29 +1,38 @@
 ul.container-msg {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 0.2rem;
-    flex-direction: row;
-    align-items: stretch;
-    flex-wrap: nowrap;
-    align-content: stretch;
-    justify-content: space-evenly;
-    overflow: hidden;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0.2rem;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  width: 100%;
+  overflow-x: scroll;
+  justify-content: flex-start;
 }
 
 ul.container-msg li {
   width: 100%;
-  max-width: 250px;
   padding: 1rem;
   background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  margin-bottom: 1rem;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 0.1rem 1rem 1.8rem 0.1rem;
+  border: solid 0.1rem #00000050;
 }
 ul.container-msg li:hover {
   transform: scale(1.01);
+}
+
+ul.container-msg li p {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
 }
 
 .gridMsgList {
@@ -58,6 +67,21 @@ ul.container-msg li:hover {
   background-color: #ededed;
 }
 
+.gridRight.mainMsg p {
+  font-size: 1.8rem;
+}
+
+#inputSearch {
+  min-width: 100%;
+  width: 100%;
+  font-size: 1.8rem;
+  padding-left: 2rem;
+}
+
+#inputSearch ::after {
+  content: "";
+}
+
 @media screen and (min-width: 1024px) {
   .gridMsgList {
     grid-template-columns: 1fr 4fr;
@@ -72,11 +96,10 @@ ul.container-msg li:hover {
     flex-wrap: nowrap;
     align-content: stretch;
     justify-content: space-evenly;
-    overflow-y: scroll ;
+    overflow-y: scroll;
     overflow-x: hidden;
     width: 300px;
-
-}
+  }
 
   ul.container-msg li {
     width: 90%;
@@ -85,14 +108,24 @@ ul.container-msg li:hover {
     background-color: #ededed;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.1s ease;
     margin: 0.1rem;
   }
-
+  ul.container-msg  p {
+    font-size: 1rem;
+  }
+  .gridLeft {
+    justify-content: flex-start;
+  }
   .gridLeft p {
     font-size: 0.9rem;
   }
+  .gridRight.mainMsg p {
+    font-size: 0.5rem;
+  }
 
-  .gridRight {
+  #inputSearch {
+    width: 90%;
+    min-width: 90%;
   }
 }
