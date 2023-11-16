@@ -13,4 +13,4 @@ Site criado como desafio pessoal para uma vaga de emprego Front-End.
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
 ![image](https://github.com/faelpatrick/sga_grid/blob/main/thumb-mobile.jpg#vitrinedev)
-![image](https://github.com/faelpatrick/sga_grid/blob/main/thumb-desktop.jpg#vitrinedev)
+<!-- ![image](https://github.com/faelpatrick/sga_grid/blob/main/thumb-desktop.jpg#vitrinedev) -->
