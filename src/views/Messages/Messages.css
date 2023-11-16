@@ -111,7 +111,7 @@ ul.container-msg li p {
     transition: transform 0.1s ease;
     margin: 0.1rem;
   }
-  ul.container-msg  p {
+  ul.container-msg li p {
     font-size: 1rem;
   }
   .gridLeft {
