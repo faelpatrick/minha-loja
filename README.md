@@ -1,5 +1,6 @@
 
 ﻿# Minha Loja - React TypeScript Firebase
+
 # https://minha-loja-894e2.web.app/
 
 Site criado como desafio pessoal para uma vaga de emprego Front-End.
